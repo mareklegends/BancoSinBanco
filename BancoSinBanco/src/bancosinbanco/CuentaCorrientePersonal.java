@@ -18,6 +18,8 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
         super(listadeentidades, titular, saldo, numerocuenta);
         this.comisionmantenimiento = comisionmantenimiento;
     }
+    
+   
 
     public float getComisionmantenimiento() {
         return comisionmantenimiento;

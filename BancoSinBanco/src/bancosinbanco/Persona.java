@@ -6,7 +6,7 @@ package bancosinbanco;
  * @author marcos
  * @version 1
  */
-public class Persona {
+public class Persona implements Imprimible{
     
     private String nombre;
     private String apellidos;
@@ -43,6 +43,15 @@ public class Persona {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    @Override
+    public void imprimir() {
+        String datos="";
+        
+        datos+=" " + nombre + " " + apellidos + " " + fecha +" ";
+        
+        System.out.println(datos);
     }
     
    

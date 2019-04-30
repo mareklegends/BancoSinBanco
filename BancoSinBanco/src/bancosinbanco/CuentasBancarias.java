@@ -6,7 +6,7 @@ package bancosinbanco;
  * @author marcos
  * @version 1
  */
-public abstract class CuentasBancarias {
+public abstract class CuentasBancarias implements Imprimible{
     
     protected Persona titular;
     protected float saldo;
@@ -45,6 +45,13 @@ public abstract class CuentasBancarias {
 
     public void setNumerocuenta(String numerocuenta) {
         this.numerocuenta = numerocuenta;
+    }
+
+    @Override
+    public void imprimir() {
+        String datos="";
+        datos+=" " +titular.getNombre() + " " + titular.getApellidos() + " " + titular.getFecha() + " " + saldo + "€ " + numerocuenta;
+        System.out.println(datos);
     }
 
     

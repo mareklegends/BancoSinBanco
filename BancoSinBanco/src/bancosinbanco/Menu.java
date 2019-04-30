@@ -37,4 +37,55 @@ public class Menu {
         return opcion;
        
     }
+     
+      public static int mostrarMenuTipoCuenta(){
+        
+        int opcion2=10;
+        
+        Scanner leermenutipocuenta = new Scanner(System.in);
+        
+         System.out.println("--------Menu--------");
+         System.out.println("1. Crear cuenta de ahorros.");
+         System.out.println("2. Crear cuenta corriente.");
+         System.out.println("3. Salir.");         
+         System.out.println("--------------------");
+         do{
+           try{
+            opcion2 = leermenutipocuenta.nextInt();
+        }catch(Exception fallo){
+            System.out.println("Fallo al leer la opción");
+        }
+          
+          
+          }while(opcion2 <1 || opcion2 >4);
+         
+        return opcion2;
+       
+    }
+      
+      
+      public static int mostrarMenuTipoCuentaCorriente(){
+        
+        int opcion3=10;
+        
+        Scanner leermenutipocuentacorriente = new Scanner(System.in);
+        
+         System.out.println("--------Menu--------");
+         System.out.println("1. Crear cuenta corriente >> PERSONAL.");
+         System.out.println("2. Crear cuenta corriente >> EMPRESA");
+         System.out.println("3. Salir.");         
+         System.out.println("--------------------");
+         do{
+           try{
+            opcion3 = leermenutipocuentacorriente.nextInt();
+        }catch(Exception fallo){
+            System.out.println("Fallo al leer la opción");
+        }
+          
+          
+          }while(opcion3 <1 || opcion3 >4);
+         
+        return opcion3;
+       
+    }
 }

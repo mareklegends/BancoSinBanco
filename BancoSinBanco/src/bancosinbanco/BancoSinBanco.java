@@ -1,6 +1,8 @@
 
 package bancosinbanco;
 
+import java.util.Scanner;
+
 /**
  *
  * @author marcos
@@ -19,6 +21,20 @@ public class BancoSinBanco {
                 System.out.println("--------------------"); 
                 System.out.println("1. Abrir una nueva cuenta.");
                 System.out.println("--------------------");
+                
+                String nombre=" ";
+                Scanner leer_nombre = new Scanner(System.in);
+                nombre = leer_nombre.nextLine();
+                String apellidos="";
+                Scanner leer_apellidos = new Scanner(System.in);
+                apellidos = leer_apellidos.nextLine();
+                String fecha="";
+                Scanner leer_fecha = new Scanner(System.in);
+                fecha = leer_fecha.nextLine();
+                
+                Persona nuevap = new Persona(nombre, apellidos, fecha);
+                
+                
                 
                 System.out.println("--------------------"); 
                 bandera=true;
