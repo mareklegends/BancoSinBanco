@@ -15,7 +15,7 @@ public class CuentaCorrienteEmpresa extends CuentaCorriente{
     public CuentaCorrienteEmpresa() {
     }
 
-    public CuentaCorrienteEmpresa(int tipointeresdescuento, int maxdescubiertopermitido, ArrayList listadeentidades, Persona titular, float saldo, String numerocuenta) {
+    public CuentaCorrienteEmpresa(int tipointeresdescuento, int maxdescubiertopermitido, ArrayList listadeentidades, Persona titular, double saldo, String numerocuenta) {
         super(listadeentidades, titular, saldo, numerocuenta);
         this.tipointeresdescuento = tipointeresdescuento;
         this.maxdescubiertopermitido = maxdescubiertopermitido;

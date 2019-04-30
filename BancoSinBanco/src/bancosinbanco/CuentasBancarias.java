@@ -9,7 +9,7 @@ package bancosinbanco;
 public abstract class CuentasBancarias implements Imprimible{
     
     protected Persona titular;
-    protected float saldo;
+    protected double saldo;
     protected String numerocuenta;
 
     public CuentasBancarias() {
@@ -17,7 +17,7 @@ public abstract class CuentasBancarias implements Imprimible{
     
     
 
-    public CuentasBancarias(Persona titular, float saldo, String numerocuenta) {
+    public CuentasBancarias(Persona titular, double saldo, String numerocuenta) {
         this.titular = new Persona(titular.getNombre(), titular.getApellidos(), titular.getFecha());
         this.saldo = saldo;
         this.numerocuenta = numerocuenta;
@@ -31,11 +31,11 @@ public abstract class CuentasBancarias implements Imprimible{
         this.titular = new Persona(titular.getNombre(), titular.getApellidos(), titular.getFecha());
     }
 
-    public float getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(float saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 

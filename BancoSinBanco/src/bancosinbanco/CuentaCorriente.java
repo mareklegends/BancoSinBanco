@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author marcos
  * @version 1
  */
-public class CuentaCorriente extends CuentasBancarias{
+public abstract class CuentaCorriente extends CuentasBancarias{
     protected ArrayList listadeentidades;
 
     public CuentaCorriente() {
@@ -18,7 +18,7 @@ public class CuentaCorriente extends CuentasBancarias{
         this.listadeentidades = listadeentidades;
     }
 
-    public CuentaCorriente(ArrayList listadeentidades, Persona titular, float saldo, String numerocuenta) {
+    public CuentaCorriente(ArrayList listadeentidades, Persona titular, double saldo, String numerocuenta) {
         super(titular, saldo, numerocuenta);
         this.listadeentidades = listadeentidades;
     }
