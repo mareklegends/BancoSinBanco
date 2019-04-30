@@ -18,8 +18,8 @@ public class BancoSinBanco {
 
         boolean bandera2 = true;
         boolean bandera3 = true;
-
-        ArrayList vBancos = new ArrayList();
+        ArrayList<CuentasBancarias> vCuentas = new ArrayList<>();
+        ArrayList<String> vBancos = new ArrayList();
         vBancos.add("Caja Rural");
         vBancos.add("BBVA");
         vBancos.add("Santander");
@@ -58,7 +58,7 @@ public class BancoSinBanco {
                                 numerocuenta = leer_numerocuenta.nextLine();
 
                                 CuentaDeAhorro cda = new CuentaDeAhorro(0, nuevap, dinerocuenta, numerocuenta);
-
+                                vCuentas.add(cda);
                                 bandera = true;
                                 break;
                             case 2:
@@ -140,6 +140,8 @@ public class BancoSinBanco {
                                 bandera = false;
 
                                 break;
+                                
+                                
 
                         }
                     } while (bandera2 != false);
@@ -153,7 +155,7 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
                     System.out.println("2. Ver un listado de las cuentas disponibles.");
                     System.out.println("--------------------");
-
+                    System.out.println(vCuentas);
                     System.out.println("--------------------");
                     bandera = true;
 
