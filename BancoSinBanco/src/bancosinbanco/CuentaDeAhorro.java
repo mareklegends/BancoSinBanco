@@ -7,7 +7,7 @@ package bancosinbanco;
  * @version 1
  */
 public abstract class CuentaDeAhorro extends CuentasBancarias{
-    protected int tipodeinteres;
+    private int tipodeinteres;
  
     public CuentaDeAhorro() {
     }

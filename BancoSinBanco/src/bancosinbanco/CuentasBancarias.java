@@ -6,11 +6,11 @@ package bancosinbanco;
  * @author marcos
  * @version 1
  */
-public class CuentasBancarias {
+public abstract class CuentasBancarias {
     
-    private Persona titular;
-    private float saldo;
-    private String numerocuenta;
+    protected Persona titular;
+    protected float saldo;
+    protected String numerocuenta;
 
     public CuentasBancarias() {
     }

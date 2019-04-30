@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author marcos
  * @version 1
  */
-public abstract class CuentaCorriente extends CuentasBancarias{
+public class CuentaCorriente extends CuentasBancarias{
     protected ArrayList listadeentidades;
 
     public CuentaCorriente() {
