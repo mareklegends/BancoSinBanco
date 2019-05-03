@@ -19,7 +19,7 @@ public abstract class CuentaCorriente extends CuentasBancarias{
         for (int i = 0; i < listadeentidades.size(); i++) {
             this.listadeentidades.add(listadeentidades.get(i).toString());
         }
-        this.h = h;
+        this.h = new Hastable(h.getNum(), h.getH());
        
     }
 
@@ -40,11 +40,11 @@ public abstract class CuentaCorriente extends CuentasBancarias{
         }
     }
     public Hastable getH() {
-        return h;
+        return new Hastable(h.getNum(), h.getH());
     }
 
     public void setH(Hastable h) {
-        this.h = h;
+        this.h = new Hastable(h.getNum(), h.getH());
     }
    
     
