@@ -18,6 +18,12 @@ public class BancoSinBanco {
 
         boolean bandera2 = true;
         boolean bandera3 = true;
+
+        String buscarncuenta = "";
+        Scanner leer_buscarncuenta = new Scanner(System.in);
+        double saldo_cuenta_total = 0;
+        Scanner dineronuevo = new Scanner(System.in);
+
         ArrayList<CuentasBancarias> vCuentas = new ArrayList<>();
         ArrayList<String> vBancos = new ArrayList();
         vBancos.add("Caja Rural");
@@ -30,13 +36,16 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
                     System.out.println("1. Abrir una nueva cuenta.");
                     System.out.println("--------------------");
-
+                    System.out.println("Dime tu nmbre");
                     String nombre = " ";
                     Scanner leer_nombre = new Scanner(System.in);
                     nombre = leer_nombre.nextLine();
+                    System.out.println("Dime tus apellidos");
                     String apellidos = "";
+
                     Scanner leer_apellidos = new Scanner(System.in);
                     apellidos = leer_apellidos.nextLine();
+                    System.out.println("Dime tu fecha de nacimiento");
                     String fecha = "";
                     Scanner leer_fecha = new Scanner(System.in);
                     fecha = leer_fecha.nextLine();
@@ -49,10 +58,11 @@ public class BancoSinBanco {
                                 System.out.println("--------------------");
                                 System.out.println("1. Crear cuenta de ahorros.");
                                 System.out.println("--------------------");
+                                System.out.println("Dime cuanto dinero quieres tener en la cuenta");
                                 double dinerocuenta = 0.00;
                                 Scanner leer_dinerocuenta = new Scanner(System.in);
                                 dinerocuenta = leer_dinerocuenta.nextDouble();
-
+                                System.out.println("Dime tu nuemro de cuenta");
                                 String numerocuenta = "";
                                 Scanner leer_numerocuenta = new Scanner(System.in);
                                 numerocuenta = leer_numerocuenta.nextLine();
@@ -77,11 +87,11 @@ public class BancoSinBanco {
                                             System.out.println("--------------------");
 
                                             double importecuenta = 3.20;
-
+                                            System.out.println("Dime cuanto dinero quieres tener en la cuenta");
                                             double dinerocuenta2 = 0.00;
                                             Scanner leer_dinerocuenta2 = new Scanner(System.in);
                                             dinerocuenta2 = leer_dinerocuenta2.nextDouble();
-
+                                            System.out.println("Dime tu nuemro de cuenta");
                                             String numerocuenta2 = "";
                                             Scanner leer_numerocuenta2 = new Scanner(System.in);
                                             numerocuenta2 = leer_numerocuenta2.nextLine();
@@ -96,11 +106,11 @@ public class BancoSinBanco {
                                             System.out.println("--------------------");
                                             System.out.println("2. Crear cuenta corriente >> EMPRESA");
                                             System.out.println("--------------------");
-
+                                            System.out.println("Dime cuanto dinero quieres tener en la cuenta");
                                             double dinerocuenta3 = 0.00;
                                             Scanner leer_dinerocuenta3 = new Scanner(System.in);
                                             dinerocuenta3 = leer_dinerocuenta3.nextDouble();
-
+                                            System.out.println("Dime tu nuemro de cuenta");
                                             String numerocuenta3 = "";
                                             Scanner leer_numerocuenta3 = new Scanner(System.in);
                                             numerocuenta3 = leer_numerocuenta3.nextLine();
@@ -140,8 +150,6 @@ public class BancoSinBanco {
                                 bandera = false;
 
                                 break;
-                                
-                                
 
                         }
                     } while (bandera2 != false);
@@ -155,7 +163,11 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
                     System.out.println("2. Ver un listado de las cuentas disponibles.");
                     System.out.println("--------------------");
-                    System.out.println(vCuentas);
+
+                    for (int i = 0; i < vCuentas.size(); i++) {
+                        vCuentas.get(i).imprimir();
+                    }
+
                     System.out.println("--------------------");
                     bandera = true;
 
@@ -166,6 +178,17 @@ public class BancoSinBanco {
                     System.out.println("3. Obtener los datos de una cuenta concreta.");
                     System.out.println("--------------------");
 
+                    buscarncuenta = leer_buscarncuenta.nextLine();
+
+                    for (int i = 0; i < vCuentas.size(); i++) {
+
+                        if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                            vCuentas.get(i).imprimir();
+                            break;
+                        }
+
+                    }
+
                     System.out.println("--------------------");
                     bandera = true;
 
@@ -175,6 +198,20 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
                     System.out.println("4. Realizar un ingreso en una cuenta.");
                     System.out.println("--------------------");
+                    System.out.println("Dime tu numero de cuento");
+                    buscarncuenta = leer_buscarncuenta.nextLine();
+                    System.out.println("Dime cuanto dinero queieres sacar");
+                    double saldo_cuenta = dineronuevo.nextDouble();
+
+                    for (int i = 0; i < vCuentas.size(); i++) {
+
+                        if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                            saldo_cuenta_total = vCuentas.get(i).getSaldo();
+                            vCuentas.get(i).setSaldo(saldo_cuenta_total + saldo_cuenta);
+                            break;
+                        }
+
+                    }
 
                     System.out.println("--------------------");
                     bandera = true;
@@ -185,6 +222,20 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
                     System.out.println("5. Retirar efectivo de una cuenta.");
                     System.out.println("--------------------");
+                    System.out.println("Dime tu numero de cuento");
+                    buscarncuenta = leer_buscarncuenta.nextLine();
+                    System.out.println("Dime cuanto dinero queieres sacar");
+                    double saldo_cuenta2 = dineronuevo.nextDouble();
+
+                    for (int i = 0; i < vCuentas.size(); i++) {
+
+                        if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                            saldo_cuenta_total = vCuentas.get(i).getSaldo();
+                            vCuentas.get(i).setSaldo(saldo_cuenta_total - saldo_cuenta2);
+                            break;
+                        }
+
+                    }
 
                     System.out.println("--------------------");
                     bandera = true;
@@ -196,6 +247,18 @@ public class BancoSinBanco {
                     System.out.println("6. Consultar el saldo actual de una cuenta.");
                     System.out.println("--------------------");
 
+                    System.out.println("Dime tu numero d ecuenta");
+                    buscarncuenta = leer_buscarncuenta.nextLine();
+
+                    for (int i = 0; i < vCuentas.size(); i++) {
+
+                        if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                            System.out.println(vCuentas.get(i).getSaldo());
+
+                            break;
+                        }
+
+                    }
                     System.out.println("--------------------");
                     bandera = true;
 
