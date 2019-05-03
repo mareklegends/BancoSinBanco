@@ -23,7 +23,7 @@ public class BancoSinBanco {
         Scanner leer_buscarncuenta = new Scanner(System.in);
         double saldo_cuenta_total = 0;
         Scanner dineronuevo = new Scanner(System.in);
-        
+
         Hastable h = new Hastable(1, "nombre hastables");
 
         ArrayList<CuentasBancarias> vCuentas = new ArrayList<>();
@@ -31,8 +31,8 @@ public class BancoSinBanco {
         vBancos.add("Caja Rural");
         vBancos.add("BBVA");
         vBancos.add("Santander");
-        
-         Persona nuevap = null;
+
+        Persona nuevap = null;
 
         do {
             switch (Menu.mostrarMenu()) {
@@ -54,11 +54,10 @@ public class BancoSinBanco {
                         String fecha = "";
                         Scanner leer_fecha = new Scanner(System.in);
                         fecha = leer_fecha.nextLine();
-   nuevap = new Persona(nombre, apellidos, fecha);
+                        nuevap = new Persona(nombre, apellidos, fecha);
                     } catch (Exception e) {
                         System.out.println("Error al introducir los datos");
                     }
-                
 
                     do {
                         switch (Menu.mostrarMenuTipoCuenta()) {
@@ -66,7 +65,7 @@ public class BancoSinBanco {
                                 System.out.println("--------------------");
                                 System.out.println("1. Crear cuenta de ahorros.");
                                 System.out.println("--------------------");
-                                   CuentaDeAhorro cda = null;
+                                CuentaDeAhorro cda = null;
                                 try {
                                     System.out.println("Dime cuanto dinero quieres tener en la cuenta");
                                     double dinerocuenta = 0.00;
@@ -108,7 +107,7 @@ public class BancoSinBanco {
                                                 String numerocuenta2 = "";
                                                 Scanner leer_numerocuenta2 = new Scanner(System.in);
                                                 numerocuenta2 = leer_numerocuenta2.nextLine();
-                                                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(importecuenta, vBancos, h,nuevap, dinerocuenta2, numerocuenta2);
+                                                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(importecuenta, vBancos, h, nuevap, dinerocuenta2, numerocuenta2);
 
                                             } catch (Exception e) {
                                                 System.out.println("Error al introducir los datos");
@@ -132,7 +131,7 @@ public class BancoSinBanco {
                                                 Scanner leer_numerocuenta3 = new Scanner(System.in);
                                                 numerocuenta3 = leer_numerocuenta3.nextLine();
 
-                                                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(1, 2, vBancos, h,nuevap, dinerocuenta3, numerocuenta3);
+                                                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(1, 2, vBancos, h, nuevap, dinerocuenta3, numerocuenta3);
 
                                             } catch (Exception e) {
                                                 System.out.println("Error al introducir los datos");
