@@ -185,7 +185,9 @@ public class BancoSinBanco {
                     System.out.println("--------------------");
 
                     for (int i = 0; i < vCuentas.size(); i++) {
-                        vCuentas.get(i).imprimir();
+                        if (vCuentas.get(i) != null) {
+                            vCuentas.get(i).imprimir();
+                        }
                     }
 
                     System.out.println("--------------------");
@@ -203,10 +205,11 @@ public class BancoSinBanco {
                         buscarncuenta = leer_buscarncuenta.nextLine();
 
                         for (int i = 0; i < vCuentas.size(); i++) {
-
-                            if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
-                                vCuentas.get(i).imprimir();
-                                break;
+                            if (vCuentas.get(i) != null) {
+                                if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                                    vCuentas.get(i).imprimir();
+                                    break;
+                                }
                             }
 
                         }
@@ -229,13 +232,13 @@ public class BancoSinBanco {
                         double saldo_cuenta = dineronuevo.nextDouble();
 
                         for (int i = 0; i < vCuentas.size(); i++) {
-
-                            if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
-                                saldo_cuenta_total = vCuentas.get(i).getSaldo();
-                                vCuentas.get(i).setSaldo(saldo_cuenta_total + saldo_cuenta);
-                                break;
+                            if (vCuentas.get(i) != null) {
+                                if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                                    saldo_cuenta_total = vCuentas.get(i).getSaldo();
+                                    vCuentas.get(i).setSaldo(saldo_cuenta_total + saldo_cuenta);
+                                    break;
+                                }
                             }
-
                         }
                     } catch (Exception e) {
                         System.out.println("Error al introducir los datos");
@@ -256,13 +259,13 @@ public class BancoSinBanco {
                         double saldo_cuenta2 = dineronuevo.nextDouble();
 
                         for (int i = 0; i < vCuentas.size(); i++) {
-
-                            if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
-                                saldo_cuenta_total = vCuentas.get(i).getSaldo();
-                                vCuentas.get(i).setSaldo(saldo_cuenta_total - saldo_cuenta2);
-                                break;
+                            if (vCuentas.get(i) != null) {
+                                if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                                    saldo_cuenta_total = vCuentas.get(i).getSaldo();
+                                    vCuentas.get(i).setSaldo(saldo_cuenta_total - saldo_cuenta2);
+                                    break;
+                                }
                             }
-
                         }
                     } catch (Exception e) {
                         System.out.println("Error al introducir los datos");
@@ -281,13 +284,13 @@ public class BancoSinBanco {
                     buscarncuenta = leer_buscarncuenta.nextLine();
 
                     for (int i = 0; i < vCuentas.size(); i++) {
+                        if (vCuentas.get(i) != null) {
+                            if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
+                                System.out.println(vCuentas.get(i).getSaldo());
 
-                        if (vCuentas.get(i).getNumerocuenta().equalsIgnoreCase(buscarncuenta)) {
-                            System.out.println(vCuentas.get(i).getSaldo());
-
-                            break;
+                                break;
+                            }
                         }
-
                     }
                     System.out.println("--------------------");
                     bandera = true;
