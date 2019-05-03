@@ -24,13 +24,21 @@ public abstract class CuentaCorriente extends CuentasBancarias{
     }
 
     public ArrayList<String> getListadeentidades() {
-        return listadeentidades;
+        
+         this.listadeentidades = new ArrayList();
+        for (int i = 0; i < listadeentidades.size(); i++) {
+            this.listadeentidades.add(listadeentidades.get(i).toString());
+        }
+           
+        return this.listadeentidades;
     }
 
     public void setListadeentidades(ArrayList<String> listadeentidades) {
-        this.listadeentidades = listadeentidades;
+        this.listadeentidades = new ArrayList();
+        for (int i = 0; i < listadeentidades.size(); i++) {
+            this.listadeentidades.add(listadeentidades.get(i).toString());
+        }
     }
-
     public Hastable getH() {
         return h;
     }
