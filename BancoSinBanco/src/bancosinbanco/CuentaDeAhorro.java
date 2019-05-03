@@ -6,7 +6,7 @@ package bancosinbanco;
  * @author marcos
  * @version 1
  */
-public class CuentaDeAhorro extends CuentasBancarias{
+public final class CuentaDeAhorro extends CuentasBancarias{
     private int tipodeinteres;
  
 

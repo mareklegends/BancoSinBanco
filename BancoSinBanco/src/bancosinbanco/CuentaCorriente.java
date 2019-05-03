@@ -9,28 +9,39 @@ import java.util.ArrayList;
  * @version 1
  */
 public abstract class CuentaCorriente extends CuentasBancarias{
-    protected ArrayList listadeentidades;
+    protected ArrayList<String> listadeentidades;
 
-    public CuentaCorriente() {
-    }
+    protected Hastable h;
 
-    public CuentaCorriente(ArrayList listadeentidades) {
-        this.listadeentidades = listadeentidades;
-    }
-
-    public CuentaCorriente(ArrayList listadeentidades, Persona titular, double saldo, String numerocuenta) {
+    public CuentaCorriente(ArrayList<String> listadeentidades, Hastable h, Persona titular, double saldo, String numerocuenta) {
         super(titular, saldo, numerocuenta);
-        this.listadeentidades = listadeentidades;
+         this.listadeentidades = new ArrayList();
+        for (int i = 0; i < listadeentidades.size(); i++) {
+            this.listadeentidades.add(listadeentidades.get(i).toString());
+        }
+        this.h = h;
+       
     }
 
-    public ArrayList getListadeentidades() {
+    public ArrayList<String> getListadeentidades() {
         return listadeentidades;
     }
 
-    public void setListadeentidades(ArrayList listadeentidades) {
+    public void setListadeentidades(ArrayList<String> listadeentidades) {
         this.listadeentidades = listadeentidades;
     }
-  
+
+    public Hastable getH() {
+        return h;
+    }
+
+    public void setH(Hastable h) {
+        this.h = h;
+    }
+   
+    
+   
+
     
     
 }

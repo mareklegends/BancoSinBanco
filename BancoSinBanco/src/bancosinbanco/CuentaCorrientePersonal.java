@@ -10,12 +10,9 @@ import java.util.ArrayList;
  */
 public class CuentaCorrientePersonal extends CuentaCorriente{
     private double comisionmantenimiento;
-    
-    public CuentaCorrientePersonal() {
-    }
 
-    public CuentaCorrientePersonal(double comisionmantenimiento, ArrayList listadeentidades, Persona titular, double saldo, String numerocuenta) {
-        super(listadeentidades, titular, saldo, numerocuenta);
+    public CuentaCorrientePersonal(double comisionmantenimiento, ArrayList<String> listadeentidades, Hastable h, Persona titular, double saldo, String numerocuenta) {
+        super(listadeentidades, h, titular, saldo, numerocuenta);
         this.comisionmantenimiento = comisionmantenimiento;
     }
 
@@ -25,6 +22,13 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
 
     public void setComisionmantenimiento(double comisionmantenimiento) {
         this.comisionmantenimiento = comisionmantenimiento;
+    }   
+  
+
+
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
     
    

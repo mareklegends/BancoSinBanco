@@ -23,6 +23,8 @@ public class BancoSinBanco {
         Scanner leer_buscarncuenta = new Scanner(System.in);
         double saldo_cuenta_total = 0;
         Scanner dineronuevo = new Scanner(System.in);
+        
+        Hastable h = new Hastable(1, "nombre hastables");
 
         ArrayList<CuentasBancarias> vCuentas = new ArrayList<>();
         ArrayList<String> vBancos = new ArrayList();
@@ -106,7 +108,7 @@ public class BancoSinBanco {
                                                 String numerocuenta2 = "";
                                                 Scanner leer_numerocuenta2 = new Scanner(System.in);
                                                 numerocuenta2 = leer_numerocuenta2.nextLine();
-                                                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(importecuenta, vBancos, nuevap, dinerocuenta2, numerocuenta2);
+                                                CuentaCorrientePersonal ccp = new CuentaCorrientePersonal(importecuenta, vBancos, h,nuevap, dinerocuenta2, numerocuenta2);
 
                                             } catch (Exception e) {
                                                 System.out.println("Error al introducir los datos");
@@ -130,7 +132,7 @@ public class BancoSinBanco {
                                                 Scanner leer_numerocuenta3 = new Scanner(System.in);
                                                 numerocuenta3 = leer_numerocuenta3.nextLine();
 
-                                                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(1, 2, vBancos, nuevap, dinerocuenta3, numerocuenta3);
+                                                CuentaCorrienteEmpresa cce = new CuentaCorrienteEmpresa(1, 2, vBancos, h,nuevap, dinerocuenta3, numerocuenta3);
 
                                             } catch (Exception e) {
                                                 System.out.println("Error al introducir los datos");

@@ -12,9 +12,7 @@ public abstract class CuentasBancarias implements Imprimible{
     protected double saldo;
     protected String numerocuenta;
 
-    public CuentasBancarias() {
-    }
-    
+  
     
 
     public CuentasBancarias(Persona titular, double saldo, String numerocuenta) {
