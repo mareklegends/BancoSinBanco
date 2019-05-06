@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Menu {
 
     /**
-     *
+     * funcion para mostrar el menu 1
      * @return
      */
     public static int mostrarMenu(){
@@ -44,7 +44,7 @@ public class Menu {
     }
      
     /**
-     *
+     * funcion para mostrar el menu 2
      * @return
      */
     public static int mostrarMenuTipoCuenta(){
@@ -73,7 +73,7 @@ public class Menu {
     }
       
     /**
-     *
+     * funcion para mostrar el menu 3
      * @return
      */
     public static int mostrarMenuTipoCuentaCorriente(){

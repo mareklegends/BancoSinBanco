@@ -13,7 +13,7 @@ public class CuentaCorrienteEmpresa extends CuentaCorriente{
     private int maxdescubiertopermitido;
 
     /**
-     *
+     * Constructor principal de CuentaCorrienteEmpresa
      * @param tipointeresdescuento
      * @param maxdescubiertopermitido
      * @param listadeentidades

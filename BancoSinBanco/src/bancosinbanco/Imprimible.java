@@ -9,7 +9,7 @@ package bancosinbanco;
 public interface Imprimible {
 
     /**
-     *
+     * plantilla para mostrar datos de clases
      */
     public void imprimir();
     

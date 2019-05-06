@@ -9,22 +9,22 @@ package bancosinbanco;
 public abstract class CuentasBancarias implements Imprimible{
     
     /**
-     *
+     * variblae objeto de persona - titular
      */
     protected Persona titular;
 
     /**
-     *
+     * variable saldo
      */
     protected double saldo;
 
     /**
-     *
+     * variable numerocuenta
      */
     protected String numerocuenta;
 
     /**
-     *
+     * Constructor principal de cuentasbancarias
      * @param titular
      * @param saldo
      * @param numerocuenta
@@ -36,7 +36,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Devuelve el objeto de persona variable titular
      * @return
      */
     public Persona getTitular() {
@@ -44,7 +44,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Rellena el objeto de persona variable titular
      * @param titular
      */
     public void setTitular(Persona titular) {
@@ -52,7 +52,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Devuelve la variable saldo
      * @return
      */
     public double getSaldo() {
@@ -60,7 +60,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Rellena la variable saldo
      * @param saldo
      */
     public void setSaldo(double saldo) {
@@ -68,7 +68,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Devuelve la variable numero de cuenta
      * @return
      */
     public String getNumerocuenta() {
@@ -76,7 +76,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Rellena la variable numero de cuenta
      * @param numerocuenta
      */
     public void setNumerocuenta(String numerocuenta) {
@@ -84,7 +84,7 @@ public abstract class CuentasBancarias implements Imprimible{
     }
 
     /**
-     *
+     * Función para mostrar los de datos de la clase cuentascancarias
      */
     @Override
     public void imprimir() {

@@ -20,7 +20,7 @@ public abstract class CuentaCorriente extends CuentasBancarias {
     protected Hastable h;
 
     /**
-     *
+     * Constructor principal de CuentaCorriente
      * @param listadeentidades
      * @param h
      * @param titular
@@ -38,7 +38,7 @@ public abstract class CuentaCorriente extends CuentasBancarias {
     }
 
     /**
-     *
+     * Devuelve el arraylist de Listadeentidades
      * @return
      */
     public ArrayList<String> getListadeentidades() {
@@ -52,7 +52,7 @@ public abstract class CuentaCorriente extends CuentasBancarias {
     }
 
     /**
-     *
+     * Rellena el arraylist de Listadeentidades
      * @param listadeentidades
      */
     public void setListadeentidades(ArrayList<String> listadeentidades) {
@@ -63,7 +63,7 @@ public abstract class CuentaCorriente extends CuentasBancarias {
     }
 
     /**
-     *
+     * Devuelve el hastable
      * @return
      */
     public Hastable getH() {
@@ -71,7 +71,7 @@ public abstract class CuentaCorriente extends CuentasBancarias {
     }
 
     /**
-     *
+     * Añade el hastable
      * @param h
      */
     public void setH(Hastable h) {

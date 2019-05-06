@@ -12,14 +12,9 @@ public class Persona implements Imprimible{
     private String apellidos;
     private String fecha;
 
+    
     /**
-     *
-     */
-    public Persona() {
-    }
-
-    /**
-     *
+     * Constructor principal de persona
      * @param nombre
      * @param apellidos
      * @param fecha
@@ -31,7 +26,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * devuelve la variable nombre
      * @return
      */
     public String getNombre() {
@@ -39,7 +34,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * rellena la variable nombre
      * @param nombre
      */
     public void setNombre(String nombre) {
@@ -47,7 +42,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * devuelve la variable apellidos
      * @return
      */
     public String getApellidos() {
@@ -55,7 +50,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * rellena la variable apellidos
      * @param apellidos
      */
     public void setApellidos(String apellidos) {
@@ -63,7 +58,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * deveuleve la variable fecha
      * @return
      */
     public String getFecha() {
@@ -71,7 +66,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * rellena la variable fecha
      * @param fecha
      */
     public void setFecha(String fecha) {
@@ -79,7 +74,7 @@ public class Persona implements Imprimible{
     }
 
     /**
-     *
+     * Función para mostrar los de datos de la clase persona
      */
     @Override
     public void imprimir() {

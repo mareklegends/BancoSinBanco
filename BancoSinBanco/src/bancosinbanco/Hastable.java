@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package bancosinbanco;
 
 /**
@@ -15,7 +11,7 @@ public class Hastable {
     private String h;
 
     /**
-     *
+     * Constructor principal de hastable
      * @param num
      * @param h
      */
@@ -25,7 +21,7 @@ public class Hastable {
     }
 
     /**
-     *
+     * devuelve la variable num
      * @return
      */
     public int getNum() {
@@ -33,7 +29,7 @@ public class Hastable {
     }
 
     /**
-     *
+     * rellena la variable num
      * @param num
      */
     public void setNum(int num) {
@@ -41,7 +37,7 @@ public class Hastable {
     }
 
     /**
-     *
+     * devuelve la varibale h
      * @return
      */
     public String getH() {
@@ -49,7 +45,7 @@ public class Hastable {
     }
 
     /**
-     *
+     * rellena la varible h
      * @param h
      */
     public void setH(String h) {

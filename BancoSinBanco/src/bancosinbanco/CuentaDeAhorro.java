@@ -10,7 +10,7 @@ public final class CuentaDeAhorro extends CuentasBancarias{
     private int tipodeinteres;
  
     /**
-     *
+     * Constructor principal de cuenta de ahorro
      * @param tipodeinteres
      * @param titular
      * @param saldo
@@ -22,7 +22,7 @@ public final class CuentaDeAhorro extends CuentasBancarias{
     }
 
     /**
-     *
+     * Devuelve el valor tipo de interes
      * @return
      */
     public int getTipodeinteres() {
@@ -30,7 +30,7 @@ public final class CuentaDeAhorro extends CuentasBancarias{
     }
 
     /**
-     *
+     * Rellena el tipo de interes
      * @param tipodeinteres
      */
     public void setTipodeinteres(int tipodeinteres) {

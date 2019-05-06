@@ -12,7 +12,7 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
     private double comisionmantenimiento;
 
     /**
-     *
+     * Constructor principal de CuentaCorrientePersonal
      * @param comisionmantenimiento
      * @param listadeentidades
      * @param h
@@ -26,7 +26,7 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
     }
 
     /**
-     *
+     * Devuelve la varaible comision de mantenimiento
      * @return
      */
     public double getComisionmantenimiento() {
@@ -34,7 +34,7 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
     }
 
     /**
-     *
+     * Añade valores a la variable comision de mantenimiento
      * @param comisionmantenimiento
      */
     public void setComisionmantenimiento(double comisionmantenimiento) {
@@ -42,7 +42,7 @@ public class CuentaCorrientePersonal extends CuentaCorriente{
     }   
   
 
-
+/* Devuelve los datos de la clase cuenta corriente personal */
     @Override
     public String toString() {
         return super.toString(); //To change body of generated methods, choose Tools | Templates.
