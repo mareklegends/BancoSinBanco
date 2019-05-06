@@ -9,7 +9,12 @@ import java.util.Scanner;
  * @version 1- final
  */
 public class Menu {
-     public static int mostrarMenu(){
+
+    /**
+     *
+     * @return
+     */
+    public static int mostrarMenu(){
         
         int opcion=10;
         
@@ -38,7 +43,11 @@ public class Menu {
        
     }
      
-      public static int mostrarMenuTipoCuenta(){
+    /**
+     *
+     * @return
+     */
+    public static int mostrarMenuTipoCuenta(){
         
         int opcion2=10;
         
@@ -63,8 +72,11 @@ public class Menu {
        
     }
       
-      
-      public static int mostrarMenuTipoCuentaCorriente(){
+    /**
+     *
+     * @return
+     */
+    public static int mostrarMenuTipoCuentaCorriente(){
         
         int opcion3=10;
         

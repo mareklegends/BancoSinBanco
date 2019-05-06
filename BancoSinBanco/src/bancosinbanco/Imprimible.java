@@ -7,6 +7,10 @@ package bancosinbanco;
  * @version 1
  */
 public interface Imprimible {
+
+    /**
+     *
+     */
     public void imprimir();
     
 
